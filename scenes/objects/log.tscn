@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cawrmpcn57l0v"]
+[gd_scene load_steps=5 format=3 uid="uid://bahrs772o76nu"]
 
 [ext_resource type="Texture2D" uid="uid://dgldyfnkc87nm" path="res://assets/game/Objects/Basic Grass Biom things 1.png" id="1_2aixv"]
 [ext_resource type="PackedScene" uid="uid://bq0iyebuw0jmh" path="res://scenes/components/collectable_component.tscn" id="2_qbesu"]
@@ -8,9 +8,10 @@ atlas = ExtResource("1_2aixv")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ukayb"]
-radius = 7.0
+radius = 6.0
 
 [node name="log" type="Sprite2D"]
+y_sort_enabled = true
 texture = SubResource("AtlasTexture_tgp24")
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_qbesu")]

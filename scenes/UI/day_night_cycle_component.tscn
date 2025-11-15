@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c1s8efydsmw0r"]
+
+[node name="DayNightCycleComponent" type="CanvasModulate"]

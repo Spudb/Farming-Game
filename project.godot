@@ -15,14 +15,19 @@ run/main_scene="uid://dq36l20ls474k"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*res://scripts/globals/tool_manager.gd"
+InventoryManager="*res://scripts/globals/Inventory_Manager.gd"
+DayAndNightCycleManager="*res://scripts/globals/day_and_night_cycle_manager.gd"
+
 [display]
 
 window/size/viewport_width=341
 window/size/viewport_height=256
 window/size/window_width_override=682
 window/size/window_height_override=512
-window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [editor_plugins]
@@ -65,11 +70,18 @@ hit={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(201, 17),"global_position":Vector2(208, 54),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+release_tool={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(509, 18),"global_position":Vector2(518, 66),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Ground"
+2d_navigation/layer_1="Chicken Navigation"
 2d_physics/layer_2="Player"
+2d_navigation/layer_2="Cow Navigation"
 2d_physics/layer_3="Interactable"
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Objects"
@@ -80,3 +92,4 @@ hit={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+2d/snap/snap_2d_transforms_to_pixel=true

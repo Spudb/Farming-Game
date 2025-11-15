@@ -401,9 +401,9 @@ radius = 4.0
 radius = 3.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_tuyoq")
-current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -440,12 +440,14 @@ script = ExtResource("8_smehm")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
-[node name="watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+[node name="watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d", "hit_component_collision_shape")]
 script = ExtResource("9_ur7pv")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisionShape2D")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_y4r1p")]
+current_tool = 0
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
 shape = SubResource("CircleShape2D_d2wvv")
